@@ -4,21 +4,21 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class Palindrome extends Command
+class FizzBuzz extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'cquential:palindrome {word}';
+    protected $signature = 'cquential:fizzbuzz {number?}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Is a word a palindrome';
+    protected $description = 'The classic FizzBuzz problem';
 
     /**
      * Create a new command instance.
@@ -32,18 +32,15 @@ class Palindrome extends Command
 
     /**
      * Execute the console command.
-     *
      */
     public function handle()
     {
-        $word = $this->argument('word');
 
-        $result = "The word '$word' is";
-        $result .= (\App\Domain\FizzBuzz::isPalindrome($word)) ? "" : " not";
-        $result .= " a palindrome";
-
-        $this->info($result);
-
+        $number = $this->argument('number');
+        if ($number) {
+            $this->info(\App\Domain\FizzBuzz::fizzbuzz($number));
+        } else {
+            \App\Domain\FizzBuzz::print();
+        }
     }
-
 }
