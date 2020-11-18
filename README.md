@@ -2,7 +2,7 @@
 
 All assignments are implemented in a vanilla Laravel 8 environment with Docker.
 
-##Installation
+## Installation
 - Check out project
 - Start a docker container in the project directory
 ```
