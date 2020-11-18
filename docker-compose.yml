@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  php:
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    container_name: php_laravel
+    volumes:
+      - .:/var/www
+    ports:
+      - "80:8000"
