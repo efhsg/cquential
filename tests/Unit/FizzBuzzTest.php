@@ -34,7 +34,8 @@ class FizzBuzzTest extends TestCase
     {
         foreach ($this->numbers as $number => $fizzbuzz) {
             $fizzbuzzResult = FizzBuzz::fizzbuzz($number);
-                $this->assertTrue($fizzbuzzResult == $fizzbuzz, "" . $number . " expected to be '" . $fizzbuzz . "' but is '" . $fizzbuzzResult . "'");
+            $this->assertTrue($fizzbuzzResult == $fizzbuzz,
+                "" . $number . " expected to be '" . $fizzbuzz . "' but is '" . $fizzbuzzResult . "'");
         }
         $this->assertTrue(true);
 

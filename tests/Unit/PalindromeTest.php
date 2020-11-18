@@ -23,9 +23,8 @@ class PalindromeTest extends TestCase
     public function testArrayOfWords()
     {
         foreach ($this->words as $word => $isPalindrome) {
-            if (Palindrome::isPalindrome($word) !== $isPalindrome) {
-                $this->assertTrue(false, "$word expected to be " . ($isPalindrome ? "" : "not ") . "a palindrome");
-            }
+            $this->assertTrue(Palindrome::isPalindrome($word) == $isPalindrome,
+                "$word expected to be " . ($isPalindrome ? "" : "not ") . "a palindrome");
         }
         $this->assertTrue(true);
     }
