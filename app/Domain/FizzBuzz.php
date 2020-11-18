@@ -6,7 +6,7 @@ namespace App\Domain;
 
 class FizzBuzz
 {
-    public static function print()
+    public static function print(): void
     {
         for ($i = 1; $i <= 100; $i++) {
             echo self::fizzbuzz($i) . PHP_EOL;
