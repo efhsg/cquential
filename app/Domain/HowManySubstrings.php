@@ -70,7 +70,7 @@ class HowManySubstrings
 
     private static function writeOutput(): void
     {
-        $outputfile = fopen(config('cquential.inputDir') . DIRECTORY_SEPARATOR . "HowManySubStringsOut.txt",
+        $outputfile = fopen(config('cquential.outputDir') . DIRECTORY_SEPARATOR . "HowManySubStringsOut.txt",
             "w") or die("Unable to open file!");
 
         foreach (self::$output as $outputline) {
