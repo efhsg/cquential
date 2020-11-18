@@ -39,7 +39,7 @@ class Palindrome extends Command
         $word = $this->argument('word');
 
         $result = "The word '$word' is";
-        $result .= (\App\Domain\FizzBuzz::isPalindrome($word)) ? "" : " not";
+        $result .= (\App\Domain\Palindrome::isPalindrome($word)) ? "" : " not";
         $result .= " a palindrome";
 
         $this->info($result);
